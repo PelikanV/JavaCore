@@ -26,6 +26,7 @@ public class Person {
         this.firstName = scanner.nextLine();
         this.lastName = scanner.nextLine();
         this.birthYear = scanner.nextInt();
+        scanner.close();
     }
 
     public void output() {
