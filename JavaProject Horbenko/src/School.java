@@ -1,60 +1,28 @@
-
-
-import java.util.List;
-
-
+import java.util.ArrayList;
 public class School {
-
-    private List<Teacher> teachers;
-    private List<Student> students;
-    private static int  totalMoneyEarned;
-    private static int totalMoneySpent;
-
-
-    public School(List<Teacher> teachers, List<Student> students) {
-        this.teachers = teachers;
-        this.students = students;
-        totalMoneyEarned=0;
-        totalMoneySpent=0;
+    public ArrayList<Teacher> teachlists;
+    public  ArrayList<Student> studentlists;
+    public  String name;
+    public  ArrayList<Teacher> SchoolTeachers = new ArrayList<>();
+    public  ArrayList<Student > SchoolStudents = new ArrayList<>();
+    public School(String name,ArrayList<Teacher> teachlists, ArrayList<Student> studentlists) {
+        this.name = name;
+        this.teachlists = teachlists;
+        this.studentlists = studentlists;
+        for (int i = this.teachlists.size()-1; i>0; i--) {
+            if (this.name.equals(this.teachlists.get(i).school)) {
+                SchoolTeachers.add(this.teachlists.get(i));
+            }
+        }
+        for (int i = this.studentlists.size()-1; i>0; i--) {
+            if (this.name.equals(this.studentlists.get(i).school)) {
+                SchoolStudents.add(this.studentlists.get(i));
+            }
+        }
     }
-
-
-    public List<Teacher> getTeachers() {
-        return teachers;
+    @Override
+    public String toString() {
+        return "Name: " + teachlists + " "+ studentlists;
     }
-
-
-    public void addTeacher(Teacher teacher) {
-        teachers.add(teacher);
-    }
-
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-
-    public void addStudent(Student student) {
-        students.add(student);
-    }
-
-
-    public int getTotalMoneyEarned() {
-        return totalMoneyEarned;
-    }
-
-
-    public static void updateTotalMoneyEarned(int MoneyEarned) {
-        totalMoneyEarned += MoneyEarned;
-    }
-
-
-    public int getTotalMoneySpent() {
-        return totalMoneySpent;
-    }
-
-
-    public static void updateTotalMoneySpent(int moneySpent) {
-        totalMoneyEarned-=moneySpent;
-     }
+   
 }
