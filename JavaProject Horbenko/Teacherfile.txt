@@ -1,0 +1,9 @@
+1/Galyna Byhmak/Physic/Lviv Secondary School
+2/Oksana Stepanyk/Math/Lviv Secondary School
+3/Tamara Okina/English/Lviv Secondary School
+4/Myhamed Avzanov/Math/Stembridge School
+5/Adam Azimov/English/Stembridge School
+6/Max Kristian/Physic/Stembridge School
+7/Yura Arbatov/Physic/World School Lviv
+8/Stepan Balabko/English/World School Lviv
+9/Iryna Belega/Math/World School Lviv

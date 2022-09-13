@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.PseudoColumnUsage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,8 +19,6 @@ public class Student {
         this.PhysicsGrades = PhysicsGrades;
         this.EnglishGrades = EnglishGrades;
         this.school = school;
-
-
     }
     @Override
     public String toString() {
@@ -40,7 +37,7 @@ public class Student {
                 String[] data1 = data.get(2).split(",");
                 String[] data2 = data.get(3).split(",");
                 String[] data3 = data.get(4).split(",");
-                Integer[] values1 = Arrays.stream(data2).map(Integer::parseInt).toArray(Integer[]::new);
+                Integer[] values1 = Arrays.stream(data1).map(Integer::parseInt).toArray(Integer[]::new);
                 Integer[] values2 = Arrays.stream(data2).map(Integer::parseInt).toArray(Integer[]::new);
                 Integer[] values3 = Arrays.stream(data3).map(Integer::parseInt).toArray(Integer[]::new);
                 List<Integer> data11 = Arrays.asList(values1);
@@ -52,5 +49,8 @@ public class Student {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+
     }
+
 }
